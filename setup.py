@@ -3,6 +3,8 @@ from setuptools import setup
 setup(
     name="pyctorize",
     version="0.1",
+    description="A Python CLI program to extract frames of videos",
+    url="https://github.com/vccolombo/pyctorize",
     author="Víctor Cora Colombo",
     author_email="victorcora98@gmail.com",
     long_description=open("README.md").read(),
