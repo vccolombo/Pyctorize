@@ -24,7 +24,7 @@ class Movie:
             return
 
         # else must take a frame every self.step miliseconds
-        times = [(t + self.start_time) / 1000 for t in range(self.start_time, int(duration), self.step)]
+        times = [(t + self.start_time) / 1000 for t in range(0, int(duration), self.step)]
         for t in times:
             imgpath = os.path.join(self.path_to_save, '{}.png'.format(t))
             clip.save_frame(imgpath, t)
