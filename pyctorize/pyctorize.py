@@ -23,7 +23,7 @@ class Movie:
             clip.save_frame(imgpath, time)
             return
 
-        # else must take a frame every self.step miliseconds
+        # else must take a frame every self.step milliseconds
         times = [(t + self.start_time) / 1000 for t in range(0, int(duration), self.step)]
         for t in times:
             imgpath = os.path.join(self.path_to_save, '{}.png'.format(t))
@@ -36,10 +36,10 @@ class Movie:
               help="Path to directory where images will be saved",
               default='.')
 @click.option('--start-time', '-t',
-              help="Time of first frame to capture, in miliseconds. Default to start of video",
+              help="Time of first frame to capture, in milliseconds. Default to start of video",
               default=0)
 @click.option('--step', '-s',
-              help="Capture a frame every <step> miliseconds. If 0, captures only the frame stated in --start-time",
+              help="Capture a frame every <step> milliseconds. If 0, captures only the frame stated in --start-time",
               default=0)
 def pyctorize(filename, path, start_time, step):
     movie = Movie(filename, path, start_time, step)
