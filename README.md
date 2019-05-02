@@ -17,7 +17,8 @@ pip install -e .
 ## Using
 
 ```
-pyctorize --path <PATH_TO_SAVE_DIRECTORY> \
+pyctorize <PATH_TO_FILE> \
+--path <PATH_TO_SAVE_DIRECTORY> \
 --start-time <TIME_IN_MILLISECONDS_OF_FIRST_FRAME> \
 --step <CAPTURE_IMAGE_EVERY_STEP_MILLISECONDS>
 ```
