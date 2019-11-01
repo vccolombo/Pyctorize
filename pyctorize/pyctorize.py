@@ -14,7 +14,9 @@ class Movie:
         clip = VideoFileClip(self.file_name)
         duration = clip.duration * 1000
 
-        # TODO: Avoid user to input time bigger than clip duration
+        if self.start_time > duration:
+            print('Error: Start time is greater than the video duration.')
+            return
 
         # if self.step  is 0, only one frame must be taken
         if self.step == 0:
