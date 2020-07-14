@@ -11,7 +11,7 @@ A Python command line program to extract frames of videos
 ```
 git clone https://github.com/vccolombo/pyctorize.git
 cd pyctorize/
-pip install -e .
+pip install .
 ```
 
 ## Using
