@@ -34,7 +34,7 @@ class Movie:
 
 @click.command()
 @click.argument('filename', type=click.Path(exists=True))
-@click.option('--path', '-p', type=click.Path(exists=True, dir_okay=True),
+@click.option('--output', '-o', type=click.Path(exists=True, dir_okay=True),
               help="Path to directory where images will be saved",
               default='.')
 @click.option('--start-time', '-t',
@@ -43,8 +43,8 @@ class Movie:
 @click.option('--step', '-s',
               help="Capture a frame every <step> milliseconds. If 0, captures only the frame stated in --start-time",
               default=0)
-def pyctorize(filename, path, start_time, step):
-    movie = Movie(filename, path, start_time, step)
+def pyctorize(filename, output, start_time, step):
+    movie = Movie(filename, output, start_time, step)
     click.echo("Generating images...")
     movie.extract_frames()
 

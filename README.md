@@ -16,7 +16,7 @@ python3 -m pip install pyctorize
 
 ```console
 $ pyctorize <PATH_TO_FILE> \
-    --path <PATH_TO_SAVE_DIRECTORY> \
+    --output <PATH_TO_OUTPUT_DIRECTORY> \
     --start-time <TIME_IN_MILLISECONDS_OF_FIRST_FRAME> \
     --step <CAPTURE_IMAGE_EVERY_STEP_MILLISECONDS>
 ```
@@ -24,7 +24,7 @@ $ pyctorize <PATH_TO_FILE> \
 Example:
 ```console
 $ pyctorize example.mp4 \
-    --path output/ \ # save result to output/
+    --output output/ \ # save result to output/
     --start-time 100 \ # starting at 100ms
     --step 1000 # take a frame every second
 ```
